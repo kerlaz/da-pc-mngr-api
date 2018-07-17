@@ -1,6 +1,8 @@
 <?php
 
 
+use App\Middleware\AuthMiddleware;
+
 $app->options('/{routes:.+}', function ($req, $res, $args) {
     return $res;
 });
@@ -23,7 +25,10 @@ $app->post("/token","AuthController:checkToken");
 $app->get("/api/getrandom","DataController:getRandom");
 $app->get("/api/getnote/{note_id}","DataController:getNote");
 
-$app->post("/api/set/meta","DataController:setMeta");
-$app->post("/api/set/error","DataController:setError");
+$app->group('', function () use ($app){
+    $app->post("/api/set/meta","DataController:setMeta");
+    $app->post("/api/set/error","DataController:setError");
+})->add(new AuthMiddleware($container));
+
 
 

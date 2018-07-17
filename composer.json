@@ -3,6 +3,7 @@
   "description": "REST API for Product Card manager App",
   "minimum-stability": "dev",
   "license": "proprietary",
+  "version": "0.1.0",
   "authors": [
     {
       "name": "Yerlan Bakuyev",

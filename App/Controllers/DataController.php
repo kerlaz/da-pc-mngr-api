@@ -12,11 +12,8 @@ class DataController extends Controller
 (select nameid from metadata as m where s.name_id = m.nameid) order by name_id';
     public function index($req, $res)
     {
-        $key = $this->settings['jwt_secret'];
-        $data = new stdClass();
-        $data->hello = 'world!';
-        $data->token = $key;
-        return $res->withJson($data);
+        $body = file_get_contents(__DIR__ . "/../../public/index.html");
+        return $res->write($body);
     }
 
     public function getRandom($req, $res)
