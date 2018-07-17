@@ -1,0 +1,22 @@
+{
+  "name": "inkoda/pc-mngr-api",
+  "description": "REST API for Product Card manager App",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Yerlan Bakuyev",
+      "email": "inkodaa@gmail.com"
+    }
+  ],
+  "require": {
+    "firebase/php-jwt": "v5.0.0",
+    "slim/slim":"3.10.0",
+    "illuminate/database":"v5.6.27"
+  },
+  "autoload":{
+    "psr-4":{
+      "App\\":"App/"
+    }
+  }
+}
