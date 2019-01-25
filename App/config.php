@@ -31,7 +31,7 @@ $app = new Slim\App([
         'displayErrorDetails' => true,
         'addContentLengthHeader' => false,
         'db' => $db['prod'],
-        'jwt_secret' => '528C17F906A642F0EB1FB26A7ABBCB60D4B3319979C95F9046D38D2A0FC2FA33'
+        'jwt_secret' => 'SECRET_KEY'
     ],
 ]);
 
